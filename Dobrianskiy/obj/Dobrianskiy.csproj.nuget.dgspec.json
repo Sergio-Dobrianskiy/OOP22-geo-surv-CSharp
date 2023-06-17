@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj": {}
+    "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Dobrianskiy\\Dobrianskiy.csproj": {}
   },
   "projects": {
-    "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj": {
+    "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Dobrianskiy\\Dobrianskiy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj",
-        "projectName": "Motta",
-        "projectPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj",
+        "projectUniqueName": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Dobrianskiy\\Dobrianskiy.csproj",
+        "projectName": "Dobrianskiy",
+        "projectPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Dobrianskiy\\Dobrianskiy.csproj",
         "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
-        "outputPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\obj\\",
+        "outputPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Dobrianskiy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config"
