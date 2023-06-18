@@ -1,47 +1,53 @@
+using System.Drawing;
+
 namespace Motta
 {
-    import java.awt.Rectangle;
-    import java.awt.geom.RectangularShape;
-    import it.unibo.geosurv.control.ITickingObject;
-    import it.unibo.geosurv.view.graphics.Texture;
+    /// import java.awt.Rectangle;
+    /// import java.awt.geom.RectangularShape;
+    /// import it.unibo.geosurv.control.ITickingObject;
+    /// import it.unibo.geosurv.view.graphics.Texture;
     
+    /// <summary>
+    /// Abstract class for every game object in the game.
+    /// </summary>
+
+    public abstract class GameObject : ITickingObject, IGameObject
+    {
         /// <summary>
-        /// Abstract class for every game object in the game.
+        /// gameObject x coordinate.
         /// </summary>
-    /**
-     * 
-     */
-    public abstract class GameObject : ITickingObject, IGameObject {
-        /**
-         * gameObject x coordinate.
-         */
         private float _x;
-        /**
-         * gameObject y coordinate.
-         */
+        
+        /// <summary>
+        /// gameObject y coordinate.
+        /// </summary>
         private float _y;
     
-        /**
-         * gameObject x velocity.
-         */
+        /// <summary>
+        /// gameObject x velocity.
+        /// </summary>
         protected float _velX;
-        /**
-         * gameObject y velocity.
-         */
+        
+        /// <summary>
+        /// gameObject y velocity.
+        /// </summary>
         protected float _velY;
-        /**
-         * gameObject dimensions.
-         */
-        protected int height;
-        protected int width;
-        /**
-         * gameObject texture.
-         */
-        protected Texture texture = Texture.MISSING_TEXTURE;
-        /**
-         * gameObject id.
-         */
-        protected ID id;
+        
+        /// <summary>
+        /// gameObject dimensions.
+        /// </summary>
+        protected int _height;
+        protected int _width;
+        
+        /// <summary>
+        /// gameObject texture.
+        /// </summary>
+        protected Texture _texture = Texture.MissingTexture;
+        
+        /// <summary>
+        /// gameObject id.
+        /// </summary>
+        protected ID _id;
     
         /**
          * Constructor for this class.
@@ -50,171 +56,112 @@ namespace Motta
          * @param y  GameObject coordinate
          * @param id GameObject id
          */
-        public GameObject(final float x, final float y, final ID id) {
-            this.x = x;
-            this.y = y;
-            this.id = id;
+        public GameObject(float x, float y, ID id) {
+            _x = x;
+            _y = y;
+            _id = id;
             // this.collisionBehavior = new NoCollisionBehavior();
         }
     
-        /**
-         * returns GameObjects' ID.
-         * 
-         * @return GameObjects' ID
-         */
-        @Override
-        public ID getId() {
-            return id;
-        }
-    
-        /**
-         * set object's id.
-         */
-        @Override
-        public void setId(final ID id) {
-            this.id = id;
-        }
-    
-        /**
-         * this object's behavior.
-         */
-        @Override
-        public abstract void tick();
-    
-        /**
-         * get object's x coordinate.
-         */
-        @Override
-        public float getX() {
-            return x;
-        }
-    
-        /**
-         * set object's x coordinate.
-         */
-        @Override
-        public void setX(final float x) {
-            this.x = x;
-        }
-    
-        /**
-         * get object's y coordinate.
-         */
-        @Override
-        public float getY() {
-            return y;
-        }
-    
-        /**
-         * set object's y coordinate.
-         */
-        @Override
-        public void setY(final float y) {
-            this.y = y;
-        }
-    
-        /**
-         * get object's velocity x vector.
-         */
-        @Override
-        public float getVelX() {
-            return velX;
-        }
-    
-        /**
-         * set object's velocity x vector.
-         */
-        @Override
-        public void setVelX(final float velX) {
-            this.velX = velX;
-        }
-    
-        /**
-         * get object's velocity y vector.
-         */
-        @Override
-        public float getVelY() {
-            return velY;
-        }
-    
-        /**
-         * set object's velocity y vector.
-         */
-        @Override
-        public void setVelY(final float velY) {
-            this.velY = velY;
-        }
-    
-        /**
-         * get object's height.
-         */
-        @Override
-        public int getHeight() {
-            return this.height;
-        }
-    
-        /**
-         * get object's width.
-         */
-        @Override
-        public int getWidth() {
-            return this.width;
-        }
-    
-        /**
-         * set object's height.
-         */
-        @Override
-        public void setHeight(final int height) {
-            this.height = height;
-        }
-    
-        /**
-         * set object's width.
-         */
-        @Override
-        public void setWidth(final int width) {
-            this.width = width;
-        }
-    
-        /**
-         * return x coordinate for object's sprite.
-         */
-        @Override
-        public int getRenderX() {
-            return (int) x - this.width / 2;
-        }
-    
-        /**
-         * return y coordinate for object's sprite.
-         */
-        @Override
-        public int getRenderY() {
-            return (int) y - this.height / 2;
-        }
-    
-        /**
-         * return object's texture.
-         */
-        @Override
-        public Texture getTexture() {
-            return this.texture;
-        }
-    
-        /**
-         * return GameObject's hitbox (that is a Rectangle by default).
-         * 
-         * @return RectangularShape centered on the GameObject
-         */
-        @Override
-        public RectangularShape getShape() {
-            return new Rectangle(this.getRenderX(), getRenderY(), this.width, this.height);
-        }
-    
-        /**
-         * handle collision with another object.
-         */
-        public abstract void collide();
+        /// <returns>
+        /// GameObjects' ID.
+        /// </returns>
+        public ID GetId() => _id;
+        
+        /// <summary>
+        /// set object's id.
+        /// </summary>
+        public void SetId(ID id) => _id = id;
+        
+        /// <summary>
+        /// this object's behavior.
+        /// </summary>
+        public abstract void Tick();
+        
+        /// <returns>
+        /// object's x coordinate.
+        /// </returns>
+        public float GetX() => _x;
+        
+        /// <summary>
+        /// set object's x coordinate.
+        /// </summary>
+        public void SetX(float x) => _x = x;
+        
+        /// <returns>
+        /// object's y coordinate.
+        /// </returns>
+        public float GetY() => _y;
+        
+        /// <summary>
+        /// object's y coordinate.
+        /// </summary>>
+        public void SetY(float y) => _y = y;
+        
+        /// <returns>
+        /// object's velocity x vector
+        /// </returns>
+        public float GetVelX() => _velX;
+        
+        /// <summary>
+        /// set object's velocity x vector.
+        /// </summary>>
+        public void SetVelX(float velX) => _velX = velX;
+        
+        /// <returns>
+        /// object's velocity y vector
+        /// </returns>
+        public float GetVelY() => _velY;
+        
+        /// <summary>
+        /// set object's velocity y vector.
+        /// </summary>
+        public void SetVelY(float velY) => _velY = velY;
+        
+        /// <returns>
+        /// object's height
+        /// </returns>
+        public int GetHeight() => _height;
+        
+        /// <returns>
+        /// object's width
+        /// </returns>
+        public int GetWidth() => _width;
+        
+        /// <summary>
+        /// set object's height.
+        /// </summary>
+        public void SetHeight(int height) => _height = height;
+        
+        /// <summary>
+        /// set object's width.
+        /// </summary>
+        public void SetWidth( int width) => _width = width;
+        
+        /// <returns>
+        /// x coordinate for object's sprite.
+        /// </returns>
+        public int GetRenderX() => (int) _x - _width / 2;
+
+        /// <returns>
+        /// y coordinate for object's sprite.
+        /// </returns>
+        public int GetRenderY() => (int) _y - _height / 2;
+
+        /// <returns>
+        /// return object's texture.
+        /// </returns>
+        public Texture GetTexture() => _texture;
+
+        /// <returns>
+        /// Rectangle centered on the GameObject
+        /// </returns>
+        public Rectangle GetShape() =>  new Rectangle(GetRenderX(), GetRenderY(), _width, _height);
+        
+        /// <summary>
+        /// handle collision with another object.
+        /// </summary>
+        public abstract void Collide();
     }
     
 }
