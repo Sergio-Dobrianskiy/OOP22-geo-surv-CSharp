@@ -23,5 +23,5 @@ build
 .settings
 
 # Ignore Obj
-Dobrianskiy/obj
-Motta/obj
+Dobrianskiy/obj/
+Motta/obj/
