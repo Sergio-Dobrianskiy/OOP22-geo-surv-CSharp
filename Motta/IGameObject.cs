@@ -1,8 +1,7 @@
+using System.Drawing;
+
 namespace Motta
 {
-    import java.awt.geom.RectangularShape;
-    import it.unibo.geosurv.view.graphics.Texture;
-
     /// <summary>
     /// Interface for GameObjects.
     /// </summary>
@@ -84,77 +83,56 @@ namespace Motta
         /// <param name="velY"> object's velocity y vector</param>
         ///
         void SetVelY(float velY);
-        //TODO: fin qui
+       
         /// <summary>
-        /// set object's id.
+        /// get object's height.
         /// </summary>
         ///
-        /// <param name="id"> object's id</param>
+        /// <returns>object's height</returns>>
         ///
-        /**
-        * get object's height.
-        * @return object's width
-        */
         int GetHeight();
-         
+        
         /// <summary>
-        /// set object's id.
+        /// get object's width.
         /// </summary>
         ///
-        /// <param name="id"> object's id</param>
+        /// <returns>object's width</returns>>
         ///
-        /**
-        * get object's width.
-        * @return object's width
-        */
         int GetWidth();
         
         /// <summary>
-        /// set object's id.
+        /// set object's height.
         /// </summary>
         ///
-        /// <param name="id"> object's id</param>
+        /// <param name="height"> object's height</param>
         ///
-        /**
-        * set object's height.
-        * @param height object's width
-        */
         void SetHeight(int height);
         
         /// <summary>
-        /// set object's id.
+        /// set object's width.
         /// </summary>
         ///
-        /// <param name="id"> object's id</param>
-        /**
-         * set object's width.
-         * @param width object's width
-         */
+        /// <param name="width"> object's width</param>
         void SetWidth(int width);
-    
-        /**
-         * return x coordinate for object's sprite.
-         * @return object sprite y coordinate
-         */
+        
+        ///
+        /// <returns>return x coordinate for object's sprite.</returns>>
+        ///
         int GetRenderX();
-    
-        /**
-         * return y coordinate for object's sprite.
-         * @return object sprite y coordinate
-         */
+
+        ///
+        /// <returns>return y coordinate for object's sprite.</returns>>
+        ///
         int GetRenderY();
-    
-        /**
-         * return GameObject's hitbox (that is a Rectangle by default).
-         * 
-         * @return RectangularShape centered on the GameObject
-         */
-        RectangularShape GetShape();
-    
-        /**
-         * return object's texture.
-         * @return object's texture
-         */
+        
+        ///
+        /// <returns>GameObject's hitbox (that is a Rectangle by default).</returns>>
+        ///
+        Rectangle GetShape();
+        
+        ///
+        /// <returns>object's texture.</returns>>
+        ///
         Texture GetTexture();
     }
 
