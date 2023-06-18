@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dropbox\\PERSONALE\\_UNI\\_ProgrammazioneAdOggetti\\Progetto\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj": {}
+    "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj": {}
   },
   "projects": {
-    "D:\\Dropbox\\PERSONALE\\_UNI\\_ProgrammazioneAdOggetti\\Progetto\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj": {
+    "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dropbox\\PERSONALE\\_UNI\\_ProgrammazioneAdOggetti\\Progetto\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj",
+        "projectUniqueName": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj",
         "projectName": "Motta",
-        "projectPath": "D:\\Dropbox\\PERSONALE\\_UNI\\_ProgrammazioneAdOggetti\\Progetto\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj",
-        "packagesPath": "C:\\Users\\pierangelo\\.nuget\\packages\\",
-        "outputPath": "D:\\Dropbox\\PERSONALE\\_UNI\\_ProgrammazioneAdOggetti\\Progetto\\OOP22-geo-surv-CSharp\\Motta\\obj\\",
+        "projectPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj",
+        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
+        "outputPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pierangelo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

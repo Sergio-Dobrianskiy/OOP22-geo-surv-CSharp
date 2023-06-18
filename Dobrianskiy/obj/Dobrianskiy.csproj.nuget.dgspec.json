@@ -1,0 +1,118 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Dobrianskiy\\Dobrianskiy.csproj": {}
+  },
+  "projects": {
+    "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Dobrianskiy\\Dobrianskiy.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Dobrianskiy\\Dobrianskiy.csproj",
+        "projectName": "Dobrianskiy",
+        "projectPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Dobrianskiy\\Dobrianskiy.csproj",
+        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
+        "outputPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Dobrianskiy\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj": {
+                "projectPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.410\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj",
+        "projectName": "Motta",
+        "projectPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj",
+        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
+        "outputPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.410\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

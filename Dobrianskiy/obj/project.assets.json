@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Motta/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Motta.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Motta.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Motta/1.0.0": {
+      "type": "project",
+      "path": "../Motta/Motta.csproj",
+      "msbuildProject": "../Motta/Motta.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Motta >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Sergio\\.nuget\\packages\\": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj",
-      "projectName": "Motta",
-      "projectPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj",
+      "projectUniqueName": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Dobrianskiy\\Dobrianskiy.csproj",
+      "projectName": "Dobrianskiy",
+      "projectPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Dobrianskiy\\Dobrianskiy.csproj",
       "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
-      "outputPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\obj\\",
+      "outputPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Dobrianskiy\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -31,7 +50,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj": {
+              "projectPath": "D:\\ProgettoOOP\\OOP22-geo-surv-CSharp\\Motta\\Motta.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
