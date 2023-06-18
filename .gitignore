@@ -21,3 +21,7 @@ build
 .idea
 .vscode
 .settings
+
+# Ignore Obj
+Dobrianskiy/obj
+Motta/obj
