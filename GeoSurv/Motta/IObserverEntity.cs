@@ -1,4 +1,4 @@
-namespace Motta
+namespace GeoSurv
 {
     /// <summary>
     /// Interface for observers.

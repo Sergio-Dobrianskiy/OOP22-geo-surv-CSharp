@@ -1,5 +1,0 @@
-D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CSharp\Motta\obj\Debug\net6.0\Motta.csproj.AssemblyReference.cache
-D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CSharp\Motta\obj\Debug\net6.0\Motta.GeneratedMSBuildEditorConfig.editorconfig
-D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CSharp\Motta\obj\Debug\net6.0\Motta.AssemblyInfoInputs.cache
-D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CSharp\Motta\obj\Debug\net6.0\Motta.AssemblyInfo.cs
-D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CSharp\Motta\obj\Debug\net6.0\Motta.csproj.CoreCompileInputs.cache

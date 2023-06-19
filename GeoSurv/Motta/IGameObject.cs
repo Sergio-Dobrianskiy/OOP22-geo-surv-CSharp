@@ -1,6 +1,6 @@
 using System.Drawing;
 
-namespace Motta
+namespace GeoSurv
 {
     /// <summary>
     /// Interface for GameObjects.

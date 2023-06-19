@@ -1,4 +1,4 @@
-﻿namespace Dobrianskiy;
+﻿namespace GeoSurv;
 
 public class Collisions
 {

@@ -1,4 +1,4 @@
-﻿namespace Dobrianskiy;
+﻿namespace GeoSurv;
 
 public class AutoBullet : Bullet
 {
@@ -8,13 +8,13 @@ public class AutoBullet : Bullet
     public AutoBullet(float x, float y, Handler handler, int damage)
         : base(x, y, handler, damage)
     {
-        this.height = AutobulletHeight;
-        this.width = AutobulletWidth;
+        //this.height = AutobulletHeight;
+        //this.width = AutobulletWidth;
         // this.texture = Texture.BULLET;
         this.collisionBehavior = new RemoveOnCollisionBehavior();
     }
 
-    public void Collide()
+    public override void Collide()
     {
         this.collisionBehavior.Collide(this, this.handler);
     }

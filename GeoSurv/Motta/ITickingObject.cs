@@ -1,4 +1,4 @@
-namespace Motta;
+namespace GeoSurv;
 
 /// <summary>
 /// Interface for Objects that need a tick method.

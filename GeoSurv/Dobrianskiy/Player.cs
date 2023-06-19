@@ -1,4 +1,4 @@
-﻿namespace Dobrianskiy;
+﻿namespace GeoSurv;
 
 public class Player : GameObject
 {
@@ -6,12 +6,12 @@ public class Player : GameObject
     {
     }
 
-    public void Tick()
+    public override void Tick()
     {
         throw new NotImplementedException();
     }
 
-    public void Collide()
+    public override void Collide()
     {
         throw new NotImplementedException();
     }

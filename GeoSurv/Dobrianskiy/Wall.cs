@@ -1,4 +1,4 @@
-﻿namespace Dobrianskiy;
+﻿namespace GeoSurv;
 
 public class Wall : Block
 {
@@ -7,16 +7,16 @@ public class Wall : Block
 
     public Wall(float x, float y) : base(x, y)
     {
-        this.height = BlockHeight;
-        this.width = BlockWidth;
+        //this.height = BlockHeight;
+        //this.width = BlockWidth;
         // this.texture = Texture.BLOCK;
     }
 
-    public void Tick()
+    public override void Tick()
     {
     }
 
-    public void Collide()
+    public override void Collide()
     {
     }
 }

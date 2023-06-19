@@ -1,4 +1,4 @@
-﻿namespace Dobrianskiy;
+﻿namespace GeoSurv;
 
 public abstract class Bullet : GameObject
 {
@@ -18,11 +18,11 @@ public abstract class Bullet : GameObject
         this.collisionBehavior = new NoCollisionBehavior();
     }
 
-    public void Tick()
+    public override void Tick()
     {
         if (StillAlive())
         {
-            UpdatePosition(velX, velY);
+           // UpdatePosition(velX, velY);
             collisions.CheckBulletCollisions(this);
         }
         else
@@ -58,7 +58,7 @@ public abstract class Bullet : GameObject
         this.damage = damage;
     }
 
-    public void Collide()
+    public override void Collide()
     {
         collisionBehavior.Collide(this, handler);
     }

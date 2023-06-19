@@ -1,4 +1,4 @@
-namespace Motta
+namespace GeoSurv
 {
    /// <summary>
    /// Interface to model Monsters.
