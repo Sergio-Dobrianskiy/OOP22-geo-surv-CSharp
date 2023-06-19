@@ -1,4 +1,4 @@
-namespace GeoSurv
+namespace GeoSurv.Motta
 {
     /// <summary>
     /// Interface for observers.

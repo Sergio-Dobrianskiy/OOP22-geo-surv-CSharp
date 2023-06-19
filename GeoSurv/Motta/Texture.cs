@@ -1,4 +1,4 @@
-namespace GeoSurv;
+namespace GeoSurv.Motta;
 
 ///<summary>
 ///Enum that contains all maps.

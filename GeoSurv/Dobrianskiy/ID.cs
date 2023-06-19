@@ -1,4 +1,4 @@
-﻿namespace GeoSurv;
+﻿namespace GeoSurv.Dobrianskiy;
 
 public enum ID
 {

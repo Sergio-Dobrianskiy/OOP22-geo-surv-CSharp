@@ -1,5 +1,4 @@
-﻿namespace GeoSurv;
-
+﻿namespace GeoSurv.Dobrianskiy;
 public class Wall : Block
 {
     private static readonly int BlockHeight = 32;

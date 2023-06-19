@@ -1,6 +1,7 @@
 using System.Drawing;
+using GeoSurv.Dobrianskiy;
 
-namespace GeoSurv
+namespace GeoSurv.Motta
 {
     /// <summary>
     /// Interface for GameObjects.

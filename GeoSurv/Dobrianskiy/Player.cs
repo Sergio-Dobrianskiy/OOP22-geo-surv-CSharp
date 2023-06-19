@@ -1,4 +1,5 @@
-﻿namespace GeoSurv;
+﻿using GeoSurv.Motta;
+namespace GeoSurv.Dobrianskiy;
 
 public class Player : GameObject
 {

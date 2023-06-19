@@ -1,6 +1,7 @@
 using System.Drawing;
+using GeoSurv.Dobrianskiy;
 
-namespace GeoSurv
+namespace GeoSurv.Motta
 {
     /// import java.awt.Rectangle;
     /// import java.awt.geom.RectangularShape;
