@@ -3,7 +3,7 @@ namespace GeoSurv.Dobrianskiy;
 
 public class Player : GameObject
 {
-    public Player(float x, float y, ID id) : base(x, y, id)
+    public Player(float x, float y, Handler handler) : base(x, y, ID.Player)
     {
     }
 
