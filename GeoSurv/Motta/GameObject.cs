@@ -37,8 +37,8 @@ namespace GeoSurv.Motta
         /// <summary>
         /// gameObject dimensions.
         /// </summary>
-        protected static int _height;
-        protected static int _width;
+        protected int _height;
+        protected int _width;
         
         /// <summary>
         /// gameObject texture.

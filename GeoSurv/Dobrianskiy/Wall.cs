@@ -6,8 +6,8 @@ public class Wall : Block
 
     public Wall(float x, float y) : base(x, y)
     {
-        //this.height = BlockHeight;
-        //this.width = BlockWidth;
+        _height = BlockHeight;
+        _width = BlockWidth;
         // this.texture = Texture.BLOCK;
     }
 
