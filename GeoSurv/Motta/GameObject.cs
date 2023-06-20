@@ -17,12 +17,12 @@ namespace GeoSurv.Motta
         /// <summary>
         /// gameObject x coordinate.
         /// </summary>
-        private float _x;
+        protected float _x;
         
         /// <summary>
         /// gameObject y coordinate.
         /// </summary>
-        private float _y;
+        protected float _y;
     
         /// <summary>
         /// gameObject x velocity.
@@ -37,13 +37,13 @@ namespace GeoSurv.Motta
         /// <summary>
         /// gameObject dimensions.
         /// </summary>
-        protected int _height;
-        protected int _width;
+        protected static int _height;
+        protected static int _width;
         
         /// <summary>
         /// gameObject texture.
         /// </summary>
-        protected Texture _texture = Texture.MissingTexture;
+        protected static Texture _texture = Texture.MissingTexture;
         
         /// <summary>
         /// gameObject id.
