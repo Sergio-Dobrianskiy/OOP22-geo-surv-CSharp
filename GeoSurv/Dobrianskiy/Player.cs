@@ -3,6 +3,7 @@ namespace GeoSurv.Dobrianskiy;
 
 public class Player : GameObject
 {
+    private List<GameObject> _observers = new List<GameObject>();
     public Player(float x, float y, Handler handler) : base(x, y, ID.Player)
     {
     }
@@ -24,11 +25,11 @@ public class Player : GameObject
 
     public void AddObserver(GameObject gameObject)
     {
-        throw new NotImplementedException();
+        _observers.Add(gameObject);
     }
 
     public void RemoveObserver(GameObject gameObject)
     {
-        throw new NotImplementedException();
+        _observers.Remove(gameObject);
     }
 }
