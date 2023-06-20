@@ -96,3 +96,9 @@ D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CShar
 D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CSharp\Test\obj\Debug\net6.0\Test.pdb
 D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CSharp\Test\obj\Debug\net6.0\Test.genruntimeconfig.cache
 D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CSharp\Test\obj\Debug\net6.0\ref\Test.dll
+D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CSharp\Test\bin\Debug\net6.0\CoverletSourceRootsMapping
+D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CSharp\Test\bin\Debug\net6.0\GeoSurv.deps.json
+D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CSharp\Test\bin\Debug\net6.0\GeoSurv.runtimeconfig.json
+D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CSharp\Test\bin\Debug\net6.0\GeoSurv.exe
+D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CSharp\Test\bin\Debug\net6.0\GeoSurv.dll
+D:\Dropbox\PERSONALE\_UNI\_ProgrammazioneAdOggetti\Progetto\OOP22-geo-surv-CSharp\Test\bin\Debug\net6.0\GeoSurv.pdb
