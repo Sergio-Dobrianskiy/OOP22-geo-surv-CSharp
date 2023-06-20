@@ -16,4 +16,19 @@ public class Player : GameObject
     {
         throw new NotImplementedException();
     }
+    
+    public int GetLevel()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void AddObserver(GameObject gameObject)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void RemoveObserver(GameObject gameObject)
+    {
+        throw new NotImplementedException();
+    }
 }
