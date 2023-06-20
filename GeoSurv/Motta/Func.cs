@@ -2,34 +2,27 @@ using GeoSurv.Dobrianskiy;
 
 namespace GeoSurv.Motta;
 
-//import java.awt.geom.Point2D;
-//import java.util.List;
-//import java.util.Random;
-//
-//import it.unibo.geosurv.model.GameObject;
-//import it.unibo.geosurv.model.Handler;
-//import it.unibo.geosurv.model.ID;
-
-/**
- * contains utility functions.
- */
-public class Func {
-
+/// <summary>
+/// contains utility functions.
+/// </summary>
+public class Func
+{
+    
     private static Random _random;
-    /**
-     * To prevent creation of instances.
-     */
-    private Func() {
-    }
 
-    /**
-     * Return random point on a circumference or ring.
-     *
-     * @param min minimal radius
-     * @param max maxi mum radius
-     *            NOTE: min must be < than max
-     * @return Pair coordinates x, y
-     */
+    /// <summary>
+    /// To prevent creation of instances.
+    /// </summary>
+    private Func()
+    {
+    }
+    
+    /// <summary>
+    /// Return random point on a circumference or ring.
+    /// </summary>
+    /// <param name="min">min radius</param>
+    /// <param name="max">max radius</param>
+    /// <returns>random point on a circumference or ring</returns>
     public static Pair<float, float> RandomPoint(float min, float max) {
         if (min < 0) {
             min = 0.0f;
@@ -46,7 +39,7 @@ public class Func {
             (max, min) = (min, max);
             Console.WriteLine("Check the order of min and max values");
         }
-
+        
         _random = new Random();
         //double angle = 2 * Math.PI * Math.random();
         double angle = 2 * Math.PI * _random.NextDouble();
@@ -59,17 +52,14 @@ public class Func {
         return new Pair<float,float>(x * max, y * max);
     }
 
-    /**
-     * Return closest enemy to the player.
-     *
-     * @param handler game handler
-     * 
-     * @return GameObject player
-     */
-
+    /// <summary>
+    /// Return closest enemy to the player.
+    /// </summary>
+    /// <param name="handler"></param>
     public static void FindClosestEnemy(Handler handler)
     {
         // below original function
+        // GameObject return: removed for semplicity
     }
     //public static GameObject FindClosestEnemy(Handler handler)
     //{
@@ -82,15 +72,15 @@ public class Func {
     //    float py;
     //    px = player.GetX();
     //    py = player.GetY();
-//
+    //
     //    for (GameObject tmpObject : tmpObjects) {
     //        if (tmpObject.getId() == ID.Monster) {
     //            float ex;
     //            float ey;
-//
+    //
     //            ex = tmpObject.getX();
     //            ey = tmpObject.getY();
-//
+    //
     //            distance = (float) Point2D.distance(px, py, ex, ey);
     //            if (distance < closestDistance) {
     //                closestDistance = distance;
@@ -100,30 +90,13 @@ public class Func {
     //    }
     //    return closestEnemy;
     //}
-
-    /**
-     * Return angle of from point A to B.
-     *
-     * @param flaot A's x coordinate
-     * @param flaot A'y x coordinate
-     * @param flaot B's x coordinate
-     * @param flaot B'y x coordinate
-     * @return Pair angle
-     */
-    // public static Pair<Float, Float> findAngle(final float ax, final float ay,
-    // final float bx, final float by) {
-    // float angle = (float) Math.atan2(by - ay, bx - ax);
-    // return new Pair<Float, Float>((float) Math.cos(angle), (float)
-    // Math.sin(angle));
-    // }
-
-    /**
-     * Return angle of from point A to B.
-     *
-     * @param a GameObject origin
-     * @param b GameObject aimed
-     * @return Pair angle
-     */
+    
+    /// <summary>
+    /// Return angle of from point A to B.
+    /// </summary>
+    /// <param name="a">obj a</param>
+    /// <param name="b">obj b</param>
+    /// <returns></returns>
     public static Pair<float, float> FindAngle2(GameObject a, GameObject b)
     {
         float ax = a.GetX();

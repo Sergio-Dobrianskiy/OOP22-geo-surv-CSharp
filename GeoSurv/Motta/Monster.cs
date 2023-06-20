@@ -2,31 +2,19 @@ using GeoSurv.Dobrianskiy;
 
 namespace GeoSurv.Motta;
 
-//
-//import it.unibo.geosurv.model.GameObject;
-//import it.unibo.geosurv.model.Handler;
-//import it.unibo.geosurv.model.ID;
-//import it.unibo.geosurv.model.IObserverEntity;
-//import it.unibo.geosurv.model.drops.Drop;
-//import it.unibo.geosurv.model.player.Player;
-//import it.unibo.geosurv.model.utility.Func;
-//import it.unibo.geosurv.model.utility.Pair;
-//
-/**
- * Abstract Class for generic monsters.
- */
+/// <summary>
+/// Abstract Class for generic monsters.
+/// </summary>
+
 public abstract class Monster : GameObject, IMonster, IObserverEntity<Player>
 {
 
     private static readonly int DefaultExperience = 1;
-    private static readonly int Bouncingspeedmultiplier = 10;
-
+    private static readonly int BouncingSpeedMultiplier = 10;
     private static readonly int MaxHitsPerSecond = 5;
     private static readonly long HitCooldown = 1000 / MaxHitsPerSecond;
-
-    private long _lastHitTime; 
-    //private static int _monstersCounter;
-    //private static int _monstersDeadCounter;
+    private readonly Drop _dropStrategy; // strategy for dropping life or experience
+    private long _lastHitTime;
 
     protected static Handler _handler;
     protected int _health; // need to be shared with monters subclasses @Sergio-Dobrianskiy
@@ -36,18 +24,14 @@ public abstract class Monster : GameObject, IMonster, IObserverEntity<Player>
     protected Player _player;
     protected double _speed;
 
-    private readonly Drop _dropStrategy; // strategy for dropping life or experience
-
-    /**
-     * Monster constructor.
-     * 
-     * @param x
-     * @param y
-     * @param h
-     */
+    ///Monster constructor.<summary>
+    /// Monster constructor.
+    /// </summary>
+    /// <param name="x">x</param>
+    /// <param name="y">y</param>
+    /// <param name="h">handler</param>
     protected Monster(float x, float y, Handler h) : base(x, y, ID.Monster)
     {
-        //Monster.monstersCounter++;
         _handler = h;
         _player = h.GetPlayer();
         _player.AddObserver(this);
@@ -55,12 +39,19 @@ public abstract class Monster : GameObject, IMonster, IObserverEntity<Player>
         _dropStrategy = new Drop(this, _handler);
     }
 
+    /// <returns>monster health</returns>
     public int GetHealth() => _health;
-
+    
+    /// <returns>monster power</returns>
     public int GetPower() => _power;
 
+    /// <returns>monster is dead</returns>
     public bool IsDead() => GetHealth() <= 0;
- 
+    
+    /// <summary>
+    /// Evaluate the damage of weapon to the monster.
+    /// </summary>
+    /// <param name="weaponDamage">damage quantity</param>
     public void Hit(int weaponDamage)
     {
         long currentTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
@@ -76,41 +67,39 @@ public abstract class Monster : GameObject, IMonster, IObserverEntity<Player>
             Die();
         }
     }
-
-    /**
-     * Entity bounce if hit by weapon.
-     */
+    
+    /// <summary>
+    /// Entity bounce if hit by weapon.
+    /// </summary>
     public void Bounce()
     {
-        // reverse the horizontal and vertical velocities to bounce the object off the
-        // player
-        _velX = -_velX * Bouncingspeedmultiplier;
-        _velY = -_velY * Bouncingspeedmultiplier;
+        _velX = -_velX * BouncingSpeedMultiplier;
+        _velY = -_velY * BouncingSpeedMultiplier;
     }
 
-   public void Die()
-   {
+    /// <summary>
+    /// Monster dies.
+    /// </summary>
+    public void Die()
+    {
         _handler.AddObject(_dropStrategy.DropGameObject());
-        _handler.RemoveObject(this); // monster is removed from Monsters list
-        //monstersCounter--;
-        //monstersDeadCounter++;
+        _handler.RemoveObject(this); 
     }
-
-    /**
-     * @return number of total monster.
-     */
-    //public static int getMonstersCounter() => monstersCounter;
+    
+    /// <summary>
+    /// Monster update of player position
+    /// </summary>
     public void Update()
     {
         _mx = _player.GetX();
         _my = _player.GetY();
     }
 
-    /**
-     * Try to reach the target as defined by {@link IMonster}.
-     * Subclasses extending reachtarget should override this method to provide
-     * specific implementation details.
-     */
+    /// <summary>
+    /// Try to reach the target as defined by {@link IMonster}.
+    /// Subclasses extending Reachtarget should override this method to provide
+    /// specific implementation details.
+    /// </summary>
     public void ReachTarget()
     {
         SetX(GetX() + _velX);
@@ -122,30 +111,33 @@ public abstract class Monster : GameObject, IMonster, IObserverEntity<Player>
         _velY = (float) ((_speed) * Math.Sin(angle));
     }
 
+    /// <summary>
+    /// Make the monster a big one
+    /// </summary>
+    /// <param name="b"></param>
+    /// <exception cref="NotImplementedException"></exception>
     public void SetIsBig(bool b)
     {
         throw new NotImplementedException();
     }
 
+    /// <summary>
+    /// Set the position where the monster appear.
+    /// It's random in an area between to circle (radius minDistance & maxDistance)
+    /// </summary>
+    /// <param name="minDistance"></param>
+    /// <param name="maxDistance"></param>
     public void SetStartingPosition(float minDistance, float maxDistance)
     {
         Pair<float, float> randomPosition = Func.RandomPoint(minDistance, maxDistance);
-        Update(); // to get player position
+        Update(); 
         SetX(_mx + randomPosition.GetX());
         SetY(_my + randomPosition.GetY());
-        // System.out.println("[" + mx + "," + my + "]");
     }
-
-    /**
-     * @return default experience a monster drop when dies.
-     */
+    
+    /// <returns>default experience a monster drop when dies.</returns>
     public int GetDefaultExperience() => DefaultExperience;
-
-    /**
-     * @return number of dead monsters.
-     */
-    //public static int GetMonstersDeadCounter() => monstersDeadCounter;
-
+    
     public override void Collide()
     {
     }

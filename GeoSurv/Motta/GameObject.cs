@@ -3,11 +3,6 @@ using GeoSurv.Dobrianskiy;
 
 namespace GeoSurv.Motta
 {
-    /// import java.awt.Rectangle;
-    /// import java.awt.geom.RectangularShape;
-    /// import it.unibo.geosurv.control.ITickingObject;
-    /// import it.unibo.geosurv.view.graphics.Texture;
-    
     /// <summary>
     /// Abstract class for every game object in the game.
     /// </summary>
@@ -49,14 +44,13 @@ namespace GeoSurv.Motta
         /// gameObject id.
         /// </summary>
         protected ID _id;
-    
-        /**
-         * Constructor for this class.
-         *
-         * @param x  GameObject coordinate
-         * @param y  GameObject coordinate
-         * @param id GameObject id
-         */
+        
+        /// <summary>
+        /// Class Constructor
+        /// </summary>
+        /// <param name="x">position</param>
+        /// <param name="y">position</param>
+        /// <param name="id">ID type</param>
         public GameObject(float x, float y, ID id) {
             _x = x;
             _y = y;

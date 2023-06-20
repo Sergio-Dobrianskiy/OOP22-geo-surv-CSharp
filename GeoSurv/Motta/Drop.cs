@@ -1,39 +1,31 @@
 using GeoSurv.Dobrianskiy;
 namespace GeoSurv.Motta;
 
-//import it.unibo.geosurv.model.GameObject;
-//import it.unibo.geosurv.model.Handler;
-//import it.unibo.geosurv.model.monsters.Monster;
-//import it.unibo.geosurv.model.monsters.types.Ball;
-
-/**
- * Class which manages the logics of dropping objects (life and experience).
- * 
- */
-public class Drop //: IDrop<GameObject>
+/// <summary>
+/// Class which manages the logics of dropping objects (life and experience).
+/// </summary>
+public class Drop
 {
-
     private static readonly int LifePillsProb = 50; // probability to get a life pill: 1/50 at monster death
     private static readonly int NewMonsterProb = 10; // probability to get a new monster: 1/10 at monster death
     private readonly Monster _m;
     private readonly Handler _h;
-
-    /**
-     * Droppable object constructor.
-     * 
-     * @param m monster.
-     * @param h handler.
-     */
+    
+    /// <summary>
+    /// Droppable object constructor.
+    /// </summary>
+    /// <param name="m">monster</param>
+    /// <param name="h">handler</param>
     public Drop(Monster m, Handler h)
     {
         _m = m;
         _h = h;
     }
-
-    /**
-     * drop implementation, which could allow for life, a new monster or experience.
-     */
-  
+    
+    /// <summary>
+    /// drop implementation, which could allow for life, a new monster or experience.
+    /// </summary>
+    /// <returns>GameObject (experience pill, monster or life pill)</returns>
     public GameObject DropGameObject()
     {
         if (ShouldDropLife()) {
@@ -43,14 +35,12 @@ public class Drop //: IDrop<GameObject>
         } else {
             return DropExperience();
         }
-
     }
-
-    /**
-     * Evaluates if a life should be dropped (probability 1/50).
-     * 
-     * @return true if life should be dropped.
-     */
+    
+    /// <summary>
+    /// Evaluates if a life should be dropped (probability 1/50).
+    /// </summary>
+    /// <returns>if Life should be dropped</returns>
     public bool ShouldDropLife()
     {
         // Generate a random number between 0 and 49
@@ -60,21 +50,16 @@ public class Drop //: IDrop<GameObject>
         return _randomNumber == 0;
     }
 
-    /**
-     * @return life object.
-     */
+    /// <returns>life object</returns>
     public Life DropLife() => new Life(_m.GetX(),_m.GetY(),_h);
-
-    /**
-     * @return experience object.
-     */
+    
+    /// <returns>experience object</returns>
     public Experience DropExperience() => new Experience(_m.GetX(), _m.GetY(), _m.GetDefaultExperience(), _h);
-
-    /**
-     * Evaluates if a new monster should be dropped (probability 1/50).
-     * 
-     * @return true if life should be dropped.
-     */
+    
+    /// <summary>
+    /// Evaluates if a new monster should be dropped (probability 1/50).
+    /// </summary>
+    /// <returns>if a new monster should be dropped</returns>
     public bool ShouldDropMonsterBall()
     {
         // Generate a random number between 0 and 10
@@ -83,10 +68,8 @@ public class Drop //: IDrop<GameObject>
         // Return true if the random number is 0 (probability of 1/10)
         return _randomNumber == 0;
     }
-
-    /**
-     * @return a new Ball monster.
-     */
+    
+    /// <returns>a new Ball monster.</returns>
     public Ball DropBall()
     {
         Ball b = new Ball(_h);
