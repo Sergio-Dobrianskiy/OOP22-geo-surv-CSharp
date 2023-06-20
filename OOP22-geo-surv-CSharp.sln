@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoSurv", "GeoSurv\GeoSurv.csproj", "{5C866261-B814-481B-B511-5E5CD03EA80A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{E9297E2E-FD93-40B0-91FA-0EDDB01935D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{5C866261-B814-481B-B511-5E5CD03EA80A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C866261-B814-481B-B511-5E5CD03EA80A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C866261-B814-481B-B511-5E5CD03EA80A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9297E2E-FD93-40B0-91FA-0EDDB01935D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9297E2E-FD93-40B0-91FA-0EDDB01935D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9297E2E-FD93-40B0-91FA-0EDDB01935D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9297E2E-FD93-40B0-91FA-0EDDB01935D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
