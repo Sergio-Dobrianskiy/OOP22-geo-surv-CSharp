@@ -44,3 +44,15 @@ public class Player : GameObject, IPlayer, IObservable {
         playerMovement.MovePlayer();
         NotifyObservers(); // notify player position
     }
+
+    public int GetExperience() {
+        return playerLevels.CurrentExperience();
+    }
+    
+    public int GetMaxExperience() {
+        return playerLevels.GetExpToLevelUp();
+    }
+    
+    public int GetLevel() {
+        return playerLevels.GetCurrentLevel();
+    }
