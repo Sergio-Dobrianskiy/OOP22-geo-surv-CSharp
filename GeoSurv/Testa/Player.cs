@@ -36,3 +36,11 @@ public class Player : GameObject, IPlayer, IObservable {
         collisionBehavior = new StopPlayerBehavior();
 
     }
+
+    public override void Tick() {
+        X += VelX;
+        Y += VelY;
+        collisions.CheckPlayerCollisions();
+        playerMovement.MovePlayer();
+        NotifyObservers(); // notify player position
+    }
