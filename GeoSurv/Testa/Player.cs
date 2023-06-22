@@ -56,3 +56,18 @@ public class Player : GameObject, IPlayer, IObservable {
     public int GetLevel() {
         return playerLevels.GetCurrentLevel();
     }
+
+    public float GetExpPercentage() {
+        if (GetExperience() == 0) {
+            return 0;
+        }
+        return (float)GetExperience() / GetMaxExperience();
+    }
+
+    public float GetLifePercentage() {
+        if (GetLife() == 0) {
+            return 0;
+        }
+        return (float)GetLife() / GetMaxLife();
+    }
+
