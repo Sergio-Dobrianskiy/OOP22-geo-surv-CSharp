@@ -1,4 +1,8 @@
+using GeoSurv.Motta;
+using GeoSurv.Dobrianskiy;
 using GeoSurv.Testa;
+
+using System.Collections.Generic;
 
 namespace Geosurv.Testa;
 
@@ -71,16 +75,16 @@ public class Player : GameObject, IPlayer, IObservable {
         return (float)GetLife() / GetMaxLife();
     }
 
-    public final void setExperience(final int experience) {
+    public public void setExperience(final int experience) {
         this.playerLevels.expUp(experience);
     }
 
-    public final int getLife() {
+    public public int getLife() {
         return this.life;
     }
 
     public final int getMaxLife() {
-        return MAX_LIFE;
+        return MaxLife;
     }
     
     public int GetSpeed() {
