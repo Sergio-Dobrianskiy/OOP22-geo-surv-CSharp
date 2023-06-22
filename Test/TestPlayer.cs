@@ -15,4 +15,12 @@ public class TestPlayer
         Handler handler = new Handler();
         player = new Player(0, 0, handler);
     }
+
+    [TestMethod]
+    public void TestGetExperience()
+    {
+        int expectedExperience = 0;
+        int actualExperience = player.GetExperience();
+        Assert.AreEqual(expectedExperience, actualExperience);
+    }
 }
