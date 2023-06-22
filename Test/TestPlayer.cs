@@ -25,6 +25,14 @@ public class TestPlayer
     }
 
     [TestMethod]
+    public void TestGetLevel()
+    {
+        int expectedLevel = 1;
+        int actualLevel = player.GetLevel();
+        Assert.AreEqual(expectedLevel, actualLevel);
+    }
+
+    [TestMethod]
     public void TestGetLife()
     {
         int expectedLife = 100;
