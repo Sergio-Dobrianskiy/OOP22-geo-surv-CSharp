@@ -91,3 +91,19 @@ public class Player : GameObject, IPlayer, IObservable {
         life = life + plusLife > GetMaxLife() ? GetMaxLife() : life + plusLife;
     }
 
+    public void AddObserver(IObserverEntity<GameObject> observer) {
+        observers.Add(observer);
+    }
+
+    public void RemoveObserver(IObserverEntity<GameObject> observer) {
+        observers.Remove(observer);
+    }
+
+    public void NotifyObservers() {
+        foreach (var observer in observers) {
+            observer.Update();
+        }
+    }
+}
+
+
