@@ -34,3 +34,20 @@ public class Camera {
             y = 1500;
         }
     }
+
+    public float GetX() {
+        return x;
+    }
+
+    public void SetX(float xPos) {
+        x = xPos;
+    }
+
+    public float GetY() {
+        return y;
+    }
+
+    public void SetY(float yPos) {
+        y = yPos;
+    }
+}
