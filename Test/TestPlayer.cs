@@ -23,4 +23,12 @@ public class TestPlayer
         int actualExperience = player.GetExperience();
         Assert.AreEqual(expectedExperience, actualExperience);
     }
+
+    [TestMethod]
+    public void TestGetLife()
+    {
+        int expectedLife = 100;
+        int actualLife = player.GetLife();
+        Assert.AreEqual(expectedLife, actualLife);
+    }
 }
