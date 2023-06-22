@@ -71,3 +71,23 @@ public class Player : GameObject, IPlayer, IObservable {
         return (float)GetLife() / GetMaxLife();
     }
 
+    public final void setExperience(final int experience) {
+        this.playerLevels.expUp(experience);
+    }
+
+    public final int getLife() {
+        return this.life;
+    }
+
+    public final int getMaxLife() {
+        return MAX_LIFE;
+    }
+    
+    public int GetSpeed() {
+        return PlayerSpeed;
+    }
+
+    public void SetLife(int plusLife) {
+        life = life + plusLife > GetMaxLife() ? GetMaxLife() : life + plusLife;
+    }
+
