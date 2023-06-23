@@ -52,7 +52,7 @@ public class Player : GameObject, IPlayer, IObservable {
 
     public int GetExperience()
     { 
-        return playerLevels._currentExperience();
+        return playerLevels.GetCurrentExperience();
     }
     
     public int GetMaxExperience() {

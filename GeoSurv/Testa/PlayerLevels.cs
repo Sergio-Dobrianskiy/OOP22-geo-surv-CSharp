@@ -15,7 +15,7 @@ namespace GeoSurv.Testa
         private const float LEVEL_MULTIPLIER = 1.3f;
 
         private int currentLevel;
-        public int _currentExperience;
+        private int _currentExperience;
         private int expToLevelUp;
         private readonly Player player;
 
