@@ -1,29 +1,58 @@
-namespace Testa;
-
-public interface IPlayer
+namespace GeoSurv.Testa
 {
-    void Tick();
+    /// Interface Player
 
-    int GetExperience();
+    public interface IPlayer
+    {
+        void Tick();
 
-    void SetExperience(int experience);
+        ///
+        /// <returns>return the experience of ther player.</returns>>
+        ///
+        int GetExperience();
 
-    void SetLife(int life);
+        ///
+        /// <param name="experience"> increases player experience</param>
+        ///
+        void SetExperience(int experience);
 
-    void Hit(int damage);
+        ///
+        /// <param name="life"> heals/damages the player</param>
+        ///
+        void SetLife(int life);
 
-    bool IsAlive();
+        ///
+        /// <param name="damage"> Player life is diminished by damage</param>
+        ///
+        void Hit(int damage);
 
-    int GetLevel();
+        ///
+        /// <returns>return true if the player is alive.</returns>>
+        ///
+        bool IsAlive();
 
-    float GetExpPercentage();
+        ///
+        /// <returns>return he level the player is in</returns>>
+        ///
+        int GetLevel();
 
-    float GetLifePercentage();
+        float GetExpPercentage();
 
-    int GetLife();
+        float GetLifePercentage();
 
-    int GetMaxLife();
+        ///
+        /// <returns>return how much health the Player has left</returns>>
+        ///
+        int GetLife();
 
-    void Collide();
-
+        ///
+        /// <returns>returns player maximum life</returns>>
+        ///
+        int GetMaxLife();
+        
+        ///
+        /// manages players collisions
+        ///
+        void Collide();
+    }
 }
