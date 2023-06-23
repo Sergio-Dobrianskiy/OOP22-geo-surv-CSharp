@@ -21,7 +21,7 @@ public class Player : GameObject, IPlayer, IObservable {
     private readonly IPlayerMovement playerMovement;
     private readonly PlayerLevels playerLevels;
     private readonly List<IObserverEntity<GameObject>> observers;
-    private WeaponLevels weaponLevels;
+    //private WeaponLevels weaponLevels;
     private readonly ICollisionBehavior collisionBehavior;
     private readonly Handler handler;
     
@@ -116,6 +116,7 @@ public class Player : GameObject, IPlayer, IObservable {
             lastHitTime = currentTime;
             }
     }
+    /*
 
     public void SetWeapons(List<Weapon> weapons) {
         // this.weapons = weapons;
@@ -126,11 +127,13 @@ public class Player : GameObject, IPlayer, IObservable {
         weaponLevels.LevelUpWeapon();
     }
 
+    */
+
     public bool IsAlive() {
         return life > 0;
     }
 
-    public void Collide() {
+    public override void Collide() {
         collisionBehavior.Collide(this, handler);
     }
 }
