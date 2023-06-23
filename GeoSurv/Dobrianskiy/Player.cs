@@ -1,4 +1,5 @@
-﻿using GeoSurv.Motta;
+﻿/*
+using GeoSurv.Motta;
 namespace GeoSurv.Dobrianskiy;
 
 public class Player : GameObject
@@ -33,3 +34,5 @@ public class Player : GameObject
         _observers.Remove(gameObject);
     }
 }
+
+*/
