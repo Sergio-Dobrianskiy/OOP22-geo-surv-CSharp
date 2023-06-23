@@ -2,7 +2,7 @@ using GeoSurv.Motta;
 using GeoSurv.Dobrianskiy;
 using GeoSurv.Testa;
 
-namespace Geosurv.Testa;
+namespace Geosurv.Testa
 {
     /// <summary>
     /// Manages player levels.
