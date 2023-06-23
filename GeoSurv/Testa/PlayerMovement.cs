@@ -19,8 +19,6 @@ namespace GeoSurv.Testa
         /// <param name="handler">The game's Handler.</param>
         public PlayerMovement(Handler handler)
         {
-            this.handler = handler;
-            this.player = handler.GetPlayer();
         }
 
         /// <summary>
@@ -28,47 +26,6 @@ namespace GeoSurv.Testa
         /// </summary>
         public void MovePlayer()
         {
-            if (player == null)
-            {
-                player = handler.GetPlayer();
-                return;
-            }
-
-            if (handler.IsUp())
-            {
-                player.SetVelY(-player.GetSpeed());
-            }
-            else if (!handler.IsDown())
-            {
-                player.SetVelY(0);
-            }
-
-            if (handler.IsDown())
-            {
-                player.SetVelY(player.GetSpeed());
-            }
-            else if (!handler.IsUp())
-            {
-                player.SetVelY(0);
-            }
-
-            if (handler.IsRight())
-            {
-                player.SetVelX(player.GetSpeed());
-            }
-            else if (!handler.IsLeft())
-            {
-                player.SetVelX(0);
-            }
-
-            if (handler.IsLeft())
-            {
-                player.SetVelX(-player.GetSpeed());
-            }
-            else if (!handler.IsRight())
-            {
-                player.SetVelX(0);
-            }
         }
     }
 }
