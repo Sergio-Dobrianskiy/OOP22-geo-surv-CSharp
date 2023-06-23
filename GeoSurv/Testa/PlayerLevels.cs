@@ -2,7 +2,7 @@ using GeoSurv.Motta;
 using GeoSurv.Dobrianskiy;
 using GeoSurv.Testa;
 
-namespace Geosurv.Testa
+namespace GeoSurv.Testa
 {
     /// <summary>
     /// Manages player levels.
@@ -15,7 +15,7 @@ namespace Geosurv.Testa
         private const float LEVEL_MULTIPLIER = 1.3f;
 
         private int currentLevel;
-        private int _currentExperience;
+        public int _currentExperience;
         private int expToLevelUp;
         private readonly Player player;
 

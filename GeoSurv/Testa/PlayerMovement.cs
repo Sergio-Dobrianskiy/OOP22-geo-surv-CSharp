@@ -1,8 +1,9 @@
 using GeoSurv.Motta;
 using GeoSurv.Dobrianskiy;
+using Geosurv.Testa;
 using GeoSurv.Testa;
 
-namespace Geosurv.Testa
+namespace GeoSurv.Testa
 {
     /// <summary>
     /// Manages player movement.

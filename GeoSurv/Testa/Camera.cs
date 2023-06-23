@@ -2,7 +2,7 @@ using GeoSurv.Motta;
 using GeoSurv.Dobrianskiy;
 using GeoSurv.Testa;
 
-namespace Geosurv.Testa;
+namespace GeoSurv.Testa;
 
 public class Camera {
     private float x;

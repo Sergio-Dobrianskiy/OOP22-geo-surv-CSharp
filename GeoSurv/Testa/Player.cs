@@ -3,8 +3,9 @@ using GeoSurv.Dobrianskiy;
 using GeoSurv.Testa;
 
 using System.Collections.Generic;
+using Geosurv.Testa;
 
-namespace Geosurv.Testa;
+namespace GeoSurv.Testa;
 
 public class Player : GameObject, IPlayer, IObservable {
     
@@ -18,7 +19,7 @@ public class Player : GameObject, IPlayer, IObservable {
     private long lastHitTime;
     private int life;
     private readonly Collisions collisions;
-    private readonly IPlayerMovement playerMovement;
+    private readonly PlayerMovement playerMovement;
     private readonly PlayerLevels playerLevels;
     private readonly List<IObserverEntity<GameObject>> observers;
     //private WeaponLevels weaponLevels;
@@ -49,7 +50,8 @@ public class Player : GameObject, IPlayer, IObservable {
         NotifyObservers(); // notify player position
     }
 
-    public int GetExperience() {
+    public int GetExperience()
+    { 
         return playerLevels._currentExperience();
     }
     
