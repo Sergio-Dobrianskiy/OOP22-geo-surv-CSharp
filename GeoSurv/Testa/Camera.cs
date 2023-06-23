@@ -5,6 +5,17 @@ using GeoSurv.Testa;
 namespace GeoSurv.Testa;
 
 public class Camera {
+
+    /**
+     * Larghezza della finestra del gioco.
+     */
+    public const int WINDOW_WIDTH = 1000;
+
+    /**
+     * Altezza della finestra del gioco.
+     */
+     
+    public const int WINDOW_HEIGHT = 600;
     private float x;
     private float y;
     private readonly Player tempPlayer;
@@ -16,8 +27,8 @@ public class Camera {
     }
 
     public void Tick() {
-        x += ((tempPlayer.GetX() - x) - Game.WINDOW_WIDTH / 2) * 0.05f;
-        y += ((tempPlayer.GetY() - y) - Game.WINDOW_HEIGHT / 2) * 0.05f;
+        x += ((tempPlayer.GetX() - x) - WINDOW_WIDTH / 2) * 0.05f;
+        y += ((tempPlayer.GetY() - y) - WINDOW_HEIGHT / 2) * 0.05f;
 
         if (x <= 0) {
             x = 0;
