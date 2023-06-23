@@ -108,6 +108,14 @@ public class Player : GameObject, IPlayer, IObservable {
             observer.Update();
         }
     }
+
+    public bool IsAlive() {
+        return life > 0;
+    }
+
+    public void Collide() {
+        collisionBehavior.Collide(this, handler);
+    }
 }
 
 
