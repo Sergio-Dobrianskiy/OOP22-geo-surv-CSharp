@@ -7,7 +7,7 @@ namespace GeoSurv.Motta;
 /// Abstract Class for generic monsters.
 /// </summary>
 
-public abstract class Monster : GameObject, IMonster, IObserverEntity<Player>
+public abstract class Monster : GameObject, IMonster, IObserverEntity<GameObject>
 {
 
     private static readonly int DefaultExperience = 1;

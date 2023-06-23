@@ -7,7 +7,8 @@ namespace GeoSurv.Motta;
 /// Class for experience pills, created at monsters death.
 /// More experience make player go to new levels.
 /// </summary>
-public class Experience : GameObject, IObserverEntity<Player> {
+public class Experience : GameObject, IObserverEntity<GameObject>
+{
 
     private static readonly int ExperienceHeight = 25;
     private static readonly int ExperienceWidth = 20;
