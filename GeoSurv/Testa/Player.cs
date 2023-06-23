@@ -83,7 +83,7 @@ public class Player : GameObject, IPlayer, IObservable {
         return this.life;
     }
 
-    public final int getMaxLife() {
+    public int getMaxLife() {
         return MaxLife;
     }
     
