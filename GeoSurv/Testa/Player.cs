@@ -29,28 +29,28 @@ public class Player : GameObject, IPlayer, IObservable {
         life = MaxLife;
         lastHitTime = 0;
         observers = new List<IObserverEntity<GameObject>>();
-        Height = PlayerHeight;
-        Width = PlayerWidth;
+        _height = PlayerHeight;
+        _width = PlayerWidth;
         this.handler = handler;
         collisions = new Collisions(handler);
         playerMovement = new PlayerMovement(handler);
         // texture = Texture.PLAYER_DUCK; // alternative texture
-        Texture = Texture.PLAYER_MOUSE;
+        //Texture = Texture.PLAYER_MOUSE;
         playerLevels = new PlayerLevels(this);
-        collisionBehavior = new StopPlayerBehavior();
+        //collisionBehavior = new StopPlayerBehavior();
 
     }
 
     public override void Tick() {
-        X += VelX;
-        Y += VelY;
+        _x += _velX;
+        _y += _velY;
         collisions.CheckPlayerCollisions();
         playerMovement.MovePlayer();
         NotifyObservers(); // notify player position
     }
 
     public int GetExperience() {
-        return playerLevels.CurrentExperience();
+        return playerLevels._currentExperience();
     }
     
     public int GetMaxExperience() {
@@ -76,7 +76,7 @@ public class Player : GameObject, IPlayer, IObservable {
     }
 
     public void SetExperience(int experience) {
-        this.playerLevels.expUp(experience);
+        this.playerLevels.ExpUp(experience);
     }
 
     public int GetLife() {
@@ -114,7 +114,7 @@ public class Player : GameObject, IPlayer, IObservable {
         if (currentTime - lastHitTime >= HitCooldown){
             SetLife(-damage);
             lastHitTime = currentTime;
-            }
+        }
     }
     /*
 

@@ -15,7 +15,7 @@ namespace Geosurv.Testa
         private const float LEVEL_MULTIPLIER = 1.3f;
 
         private int currentLevel;
-        private int currentExperience;
+        private int _currentExperience;
         private int expToLevelUp;
         private readonly Player player;
 
@@ -26,7 +26,7 @@ namespace Geosurv.Testa
         public PlayerLevels(Player player)
         {
             this.currentLevel = STARTING_LEVEL;
-            this.currentExperience = 0;
+            this._currentExperience = 0;
             this.expToLevelUp = BASE_EXP;
             this.player = player;
         }
@@ -37,8 +37,8 @@ namespace Geosurv.Testa
         /// <param name="exp">The experience gained.</param>
         public void ExpUp(int exp)
         {
-            this.currentExperience += exp;
-            if (this.currentExperience > this.expToLevelUp && this.currentLevel < MAX_LEVEL)
+            this._currentExperience += exp;
+            if (this._currentExperience > this.expToLevelUp && this.currentLevel < MAX_LEVEL)
             {
                 this.LevelUp();
             }
@@ -52,9 +52,9 @@ namespace Geosurv.Testa
             if (this.currentLevel < MAX_LEVEL)
             {
                 this.currentLevel += 1;
-                this.currentExperience = 0;
+                this._currentExperience = 0;
                 this.expToLevelUp = (int)(this.expToLevelUp * LEVEL_MULTIPLIER);
-                this.player.LevelUpWeapon();
+                //this.player.LevelUpWeapon();
             }
         }
 
@@ -73,7 +73,7 @@ namespace Geosurv.Testa
         /// <returns>The player's current experience.</returns>
         public int GetCurrentExperience()
         {
-            return this.currentExperience;
+            return this._currentExperience;
         }
 
         /// <summary>
