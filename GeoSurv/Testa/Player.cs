@@ -109,6 +109,23 @@ public class Player : GameObject, IPlayer, IObservable {
         }
     }
 
+    public void Hit(int damage) {
+        var currentTime = System.DateTimeOffset.Now.ToUnixTimeMilliseconds();
+        if (currentTime - lastHitTime >= HitCooldown){
+            SetLife(-damage);
+            lastHitTime = currentTime;
+            }
+    }
+
+    public void SetWeapons(List<Weapon> weapons) {
+        // this.weapons = weapons;
+        weaponLevels = new WeaponLevels(weapons);
+    }
+
+    public void LevelUpWeapon() {
+        weaponLevels.LevelUpWeapon();
+    }
+
     public bool IsAlive() {
         return life > 0;
     }
